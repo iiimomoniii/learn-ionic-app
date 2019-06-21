@@ -7,7 +7,7 @@ import { RecipesService } from './recipes.service';
   templateUrl: './recipes.page.html',
   styleUrls: ['./recipes.page.scss'],
 })
-export class RecipesPage implements OnInit {
+export class RecipesPage implements OnInit, OnDestroy {
 
   recipes: Recipe[];
 
@@ -15,6 +15,10 @@ export class RecipesPage implements OnInit {
 
   ngOnInit() {
     this.recipes = this.recipesService.getAllRecipes();
+  }
+
+  ngOnDestroy(){
+
   }
 
 }

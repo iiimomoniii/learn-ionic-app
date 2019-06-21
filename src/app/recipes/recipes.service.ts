@@ -21,6 +21,7 @@ export class RecipesService {
   constructor() { }
 
   getAllRecipes(){
+    console.log(this.recipes);
     return [...this.recipes];
   }
 
@@ -31,7 +32,7 @@ export class RecipesService {
   }
 
   deleteRecipe(recipeId: string){
-    this.recipes = this.recipes.filter( recipe => {
+    this.recipes = this.recipes.filter(recipe => {
       return recipe.id !== recipeId; 
     });
   }
