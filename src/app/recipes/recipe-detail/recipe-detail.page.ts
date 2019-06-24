@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipesService } from '../recipes.service';
 import { Recipe } from '../recipes.model';
@@ -32,6 +32,10 @@ export class RecipeDetailPage implements OnInit {
     });
   }
 
+  ngOnDestroy(){
+
+  }
+
   onDeleteRecipe(){
     this.alertCtrl.create({
       header: 'Are you sure?',
@@ -53,6 +57,23 @@ export class RecipeDetailPage implements OnInit {
     }).then(alertEl => {
       alertEl.present();
     });
+    
+  }
+
+
+  ionViewWillEnter(){
+    
+  }
+
+  ionViewDidEnter(){
+
+  }
+
+  ionViewWillLeave(){
+
+  }
+
+  ionViewViewEnter(){
     
   }
 
